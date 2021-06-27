@@ -143,6 +143,36 @@ void libera(Fila* fila){
 }
 
 int main(){
+	
+	Fila* f1;
+	
+	f1 = cria();
+	
+	enqueue_fim(f1, 1);
+	enqueue_fim(f1, 2);
+	enqueue_fim(f1, 3);
+	enqueue_fim(f1, 4);
+	enqueue_fim(f1, 5);
+	imprime(f1);
+	
+	enqueue_inicio(f1, 10);
+	imprime(f1);
+	
+	enqueue_inicio(f1, 12);
+	imprime(f1);
+	
+	dequeue_fim(f1);
+	imprime(f1);
+	
+	dequeue_inicio(f1);
+	imprime(f1);
+	
+	libera(f1);
+	cria();
+	imprime(f1);
+}
+
+/*int main(){
   int opcao=0, valor;
 
     Fila* fila = cria();
@@ -205,4 +235,4 @@ int main(){
             printf("\n\nOpÃ§Ã£o invalida!\n\n");
         }
     } while(opcao != 0);
-}
+}*/
